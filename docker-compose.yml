@@ -1,0 +1,18 @@
+version: '3'
+services:
+  job-server:
+    build: .
+    container_name: job-server
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - '8000:8000'
+    env_file:
+      - .env.docker
+    depends_on:
+      - kw-grouper-mq
+  kw-grouper-mq:
+    image: rabbitmq:3-management-alpine
+    container_name: kw-grouper-mq
+    ports:
+      - 5673:5672

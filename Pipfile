@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+google-search-results = "*"
+pandas = "*"
+python-decouple = "*"
+python-socketio = { extras = ["client"], version = "*" }
+django-q = "*"
+gunicorn = "*"
+netifaces = "*"
+gcsfs = "*"
+google-cloud-storage = "*"
+celery = "*"
+snowflake-sqlalchemy = "*"
+fuzzywuzzy = "*"
+python-Levenshtein = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
